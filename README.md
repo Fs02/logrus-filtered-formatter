@@ -7,7 +7,7 @@ package main
 
 import (
 	"github.com/Fs02/logrus-filtered-formatter"
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 )
 
 func main() {
