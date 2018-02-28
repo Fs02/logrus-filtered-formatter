@@ -24,6 +24,6 @@ func New(fields []string, formatter logrus.Formatter) *Formatter {
 // Format renders a single log entry
 func (f *Formatter) Format(entry *logrus.Entry) ([]byte, error) {
 	data, err := f.formatter.Format(entry)
-	data = f.filter.ReplaceAll(data, []byte(`"$1":[FILTERED]$4`))
+	data = f.filter.ReplaceAll(data, []byte(`"$1":"[FILTERED]"$4`))
 	return data, err
 }
